@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:height="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title> Leon POS System</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        #imageDiv{
+            position: absolute;
+            top: 0px;
+           right: 0px;
+            z-index: 0;
+        }
+        #navBar{
+            position: relative;
+            top: 4px;
+            z-index: 1;
+            box-shadow: 4px 5px 10px -4px black;
+            border-radius: 10px;
+            border-width: 10px;
+            border-color: black;
+        }
+        #textContent{
+            position: relative;
+            top: 20vh;
+        }
+        #welcome{
+            position: relative;
+            left: 7vw;
+            font-size: 10vh;
+            font-family: Cinzel;
+            color: #192a56;
+        }
+        #leo{
+            position: relative;
+            left: 15vw;
+            font-size: 5vh;
+            font-family: "Baskerville Old Face";
+
+        }
+    </style>
 </head>
-<body>
-$END$
+<body class="overflow-hidden">
+<nav  ID="navBar" class="navbar navbar-expand-lg navbar-light bg-transparent" >
+    <div class="container-fluid" >
+        <a class="navbar-brand text-success" >Leo Super Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark"  aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item " >
+                    <a class="nav-link text-dark" href="OrderIndex.html">Orders</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-dark" href="CustomerIndex.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-dark" href="ItemIndex.html">Items</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div ID="imageDiv">
+    <img src="assets/images/posImg.jpg" width="596px" height="806px">
+</div>
+<div ID="textContent">
+    <h1 id="welcome">Welcome !</h1>
+    <h2 ID="leo">Leo Super Market</h2>
+</div>
 </body>
 </html>
