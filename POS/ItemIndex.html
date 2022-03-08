@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--font import-->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet">
+
+    <style>
+        #navBar {
+            position: relative;
+            top: 4px;
+            z-index: 1;
+            box-shadow: 4px 5px 10px -4px black;
+            border-radius: 10px;
+            border-width: 10px;
+            border-color: black;
+        }
+        #titleContext {
+            position: relative;
+            left: 38vw;
+            font-family: Ubuntu;
+            color: #eb3b5a;
+        }
+
+        #titleSearchItem{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body class="overflow-hidden">
+<nav  ID="navBar" class="navbar navbar-expand-lg navbar-light bg-transparent" >
+    <div class="container-fluid" >
+        <a class="navbar-brand text-success" >Leo Super Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark"  aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item " >
+                    <a class="nav-link text-dark" href="OrderIndex.html">Orders</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-dark" href="CustomerIndex.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-dark" href="ItemIndex.html">Items</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<section class="container overflow-hidden">
+    <div ID="titleContext">
+        <h1 ID="customerH1" class="container overflow-hidden mt-4" >Item</h1>
+    </div>
+    <section ID="mainContext" class="container overflow-hidden mt-4">
+        <button ID="AddCustomerBtn" class="btn btn-success btn-sm mt-2 " type="button">+ Add New Item</button>
+        <div class="align bg-light mt-1" style="outline-color: black">
+            <h4 ID="titleSearchItem" class="mt-lg-4"  style="background-color: #4ed429"  >Search Item</h4>
+
+            <form class="row gy-3 gx-3 align-items-center">
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingInput">Name</label>
+                    <input class="form-control" id="autoSizingInput" placeholder="search" style="width: 500px"
+                           type="text">
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                        <option value="1">Name</option>
+                        <option value="2">NIC</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary " type="submit">Search</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-sm mt-1" style="background: #ee0216" type="reset">Delete</button>
+                    <button class="btn btn-primary btn-sm mt-1" style="background: #1d33ab" type="reset">Details</button>
+                    <button class="btn btn-primary btn-sm mt-1" style="background: #565e64" type="button">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="shadow-sm">
+            <table class="table table-primary table-bordered table-responsive-lg table-hover mt-3">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">C001</th>
+                    <td>Sameera</td>
+                    <td>945862075V</td>
+                    <td>Kadawatha</td>
+                    <td>0715486957</td>
+                </tr>
+                <tr>
+                    <th scope="row">C002</th>
+                    <td>Kamal</td>
+                    <td>954578215V</td>
+                    <td>Matara</td>
+                    <td>0764581257</td>
+                </tr>
+                <tr>
+                    <th scope="row">C003</th>
+                    <td>Saman</td>
+                    <td>@200204500854</td>
+                    <td>Galle</td>
+                    <td>0754562131</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section>
+</body>
+</html>

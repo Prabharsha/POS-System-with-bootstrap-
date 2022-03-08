@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--font import-->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet">
+
+    <style>
+        #navBar {
+            position: relative;
+            top: 4px;
+            z-index: 1;
+            box-shadow: 4px 5px 10px -4px black;
+            border-radius: 10px;
+            border-width: 10px;
+            border-color: black;
+        }
+
+        #titleContext {
+            position: relative;
+            left: 35vw;
+            font-family: Ubuntu;
+            color: #eb3b5a;
+        }
+
+        #titleSearchCustomer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<nav ID="navBar" class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand text-success">Leo Super Market</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-dark" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-dark" href="../OrderIndex.html">Orders</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-dark" href="CustomerIndex.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-dark" href="../ItemIndex.html">Items</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<section class="container overflow-hidden">
+    <div ID="titleContext">
+        <h1 ID="customerH1" class="container overflow-hidden mt-4">Customer</h1>
+    </div>
+    <section ID="mainContext" class="container overflow-hidden mt-4">
+
+        <button ID="AddCustomerBtn" class="btn btn-success btn-sm mt-2" data-bs-target="#exampleModal" data-bs-toggle="modal"
+                >+ Add New Customer
+        </button>
+
+        <div class="align bg-light mt-1" style="outline-color: black">
+            <h4 ID="titleSearchCustomer" class="mt-lg-4" style="background-color: #4ed429">Search Customer</h4>
+
+            <form class="row gy-3 gx-3 align-items-center">
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingInput">Name</label>
+                    <input class="form-control" id="autoSizingInput" placeholder="search" style="width: 500px"
+                           type="text">
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                        <option value="1">Name</option>
+                        <option value="2">NIC</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary " type="submit">Search</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-sm mt-1" style="background: #ee0216" type="reset">Delete</button>
+                    <button class="btn btn-primary btn-sm mt-1" style="background: #1d33ab" type="reset">Details
+                    </button>
+                    <button class="btn btn-primary btn-sm mt-1" style="background: #565e64" type="button">Clear</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section>
+
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #b8dffa">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: #1d33ab">New Customer</h5>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="col-form-label" for="itemCode">Customer ID:</label>
+                                <input class="form-control" id="itemCode" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="col-form-label" for="name-text">Customer Name:</label>
+                                <input class="form-control" id="name-text" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="col-form-label" for="price">Customer Address:</label>
+                                <input class="form-control" id="price" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="col-form-label" for="qty">Customer Salary:</label>
+                                <input class="form-control" id="qty" type="text">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #565e64"
+                                type="button">Close
+                        </button>
+                        <button class="btn btn-primary" style="background-color: darkgreen" type="button">Renew</button>
+                        <button class="btn btn-primary" style="background-color: darkblue" type="button">Save Customer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--table-->
+    <section class="shadow-sm">
+        <table class="table table-primary table-bordered table-responsive-lg table-hover mt-3">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">NIC</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row"> C001</th>
+                <td>Prabharsha</td>
+                <td>200090778</td>
+                <td>Weligama</td>
+                <td>04355454</td>
+            </tr>
+
+            <tr>
+                <th scope="row"> C002</th>
+                <td>Kumara</td>
+                <td>200090438</td>
+                <td>Galle</td>
+                <td>04343434</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+<script>
+    $('#AddCustomerBtn').click(function () {
+        $("#exampleModal").show('modal');
+    });
+</script>
+</body>
+</html>
