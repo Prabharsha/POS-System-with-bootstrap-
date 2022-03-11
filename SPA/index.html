@@ -108,7 +108,6 @@
   <section ID="itemMainContext" class="container overflow-hidden mt-4">
     <button ID="AddItemBtn" class="btn btn-success btn-sm mt-2 " type="button">+ Add New Item</button>
     <div class="align bg-light mt-1" style="outline-color: black">
-      <h4 ID="titleSearchItem" class="mt-lg-4"  style="background-color: #4ed429"  >Search Item</h4>
 
       <form class="row gy-3 gx-3 align-items-center">
         <div class="col-auto">
@@ -187,7 +186,7 @@
       </button>
 
       <div class="align bg-light mt-1" style="outline-color: black">
-        <h4 ID="titleSearchCustomer" class="mt-lg-4" style="background-color: #4ed429">Search Customer</h4>
+
 
         <form class="row gy-3 gx-3 align-items-center">
           <div class="col-auto">
@@ -221,25 +220,25 @@
         <div class="modal-dialog">
           <div class="modal-content" style="background-color: #b8dffa">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel" style="color: #1d33ab">New Customer</h5>
+              <h5 class="modal-title" id="exampleModalLabel" style="color: #1d33ab">New CustomerDTO</h5>
               <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
               <form>
                 <div class="mb-3">
-                  <label class="col-form-label" for="itemCode">Customer ID:</label>
+                  <label class="col-form-label" for="itemCode">CustomerDTO ID:</label>
                   <input class="form-control" id="itemCode" type="text">
                 </div>
                 <div class="mb-3">
-                  <label class="col-form-label" for="name-text">Customer Name:</label>
+                  <label class="col-form-label" for="name-text">CustomerDTO Name:</label>
                   <input class="form-control" id="name-text" type="text">
                 </div>
                 <div class="mb-3">
-                  <label class="col-form-label" for="price">Customer Address:</label>
+                  <label class="col-form-label" for="price">CustomerDTO Address:</label>
                   <input class="form-control" id="price" type="text">
                 </div>
                 <div class="mb-3">
-                  <label class="col-form-label" for="qty">Customer Salary:</label>
+                  <label class="col-form-label" for="qty">CustomerDTO Salary:</label>
                   <input class="form-control" id="qty" type="text">
                 </div>
               </form>
@@ -249,7 +248,7 @@
                       type="button">Close
               </button>
               <button class="btn btn-primary" style="background-color: darkgreen" type="button">Renew</button>
-              <button class="btn btn-primary" style="background-color: darkblue" type="button">Save Customer
+              <button class="btn btn-primary" style="background-color: darkblue" type="button">Save CustomerDTO
               </button>
             </div>
           </div>
@@ -298,7 +297,23 @@
 
 <!--section placeOrder-->
 <section id="placeOrderPage">
-  <h2> place order page</h2>
+  <section class="shadow-lg overflow-hidden container overflow-hidden">
+    <table class="table  table-dark table-bordered table-responsive-lg table-hover align-content-center  mt-5 bg-dark">
+      <thead class="align-content-center">
+      <tr>
+        <th scope="col">Item Code</th>
+        <th scope="col">Item Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price (per unit)</th>
+        <th scope="col">Total (Rs)</th>
+      </tr>
+      </thead>
+      <tbody id="orderTable">
+
+      </tbody>
+    </table>
+
+  </section>
 </section>
 
 <!--script-->
@@ -361,7 +376,7 @@
       $("#itemPage").css("display","none");
       $("#customerPage").css("display","none");
       $("#placeOrderPage").css("display","none");
-      $("#orderDetailsPage").css("display","block");
+      $("#placeOrderPage").css("display","block");
 
       $("#orderLink").css("fontWeight","bold")
       $("#homeLink").css("fontWeight","normal")
@@ -369,12 +384,6 @@
       $("#customerLink").css("fontWeight","normal")
     });
 
-   /* $("").click(function () {
-      $("#itemPage").css("display","block");
-      $("#customerPage").css("display","none");
-      $("#placeOrderPage").css("display","none");
-      $("#orderDetailsPage").css("display","none");
-    });*/
 
 
 </script>
