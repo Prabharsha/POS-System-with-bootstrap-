@@ -75,7 +75,7 @@
           <a class="nav-link active text-dark"  style="cursor: pointer" aria-current="page" >Home</a>
         </li>
         <li class= "nav-item" id="orderLink" >
-          <a class="nav-link text-dark" style="cursor: pointer">Orders</a>
+          <a class="nav-link text-dark" style="cursor: pointer">Order</a>
         </li>
         <li class="nav-item" id="customerLink">
           <a class="nav-link text-dark" style="cursor: pointer">Customer</a>
@@ -126,9 +126,8 @@
           <button class="btn btn-primary " type="submit">Search</button>
         </div>
         <div>
-          <button class="btn btn-primary btn-sm mt-1" style="background: #ee0216" type="reset">Delete</button>
+          <button class="btn btn-primary btn-sm mt-1" style="background: #ff3838" type="reset">Delete</button>
           <button class="btn btn-primary btn-sm mt-1" style="background: #1d33ab" type="reset">Details</button>
-          <button class="btn btn-primary btn-sm mt-1" style="background: #565e64" type="button">Clear</button>
         </div>
       </form>
     </div>
@@ -250,10 +249,10 @@
             <button class="btn btn-primary " type="submit">Search</button>
           </div>
           <div>
-            <button class="btn btn-primary btn-sm mt-1" style="background: #ee0216" type="reset">Delete</button>
+            <button class="btn btn-primary btn-sm mt-1" style="background: #ff3838" type="reset">Delete</button>
             <button class="btn btn-primary btn-sm mt-1" style="background: #1d33ab" type="reset">Details
             </button>
-            <button class="btn btn-primary btn-sm mt-1" style="background: #565e64" type="button">Clear</button>
+
           </div>
         </form>
       </div>
@@ -265,25 +264,25 @@
         <div class="modal-dialog">
           <div class="modal-content" style="background-color: #b8dffa">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel" style="color: #1d33ab">New CustomerDTO</h5>
+              <h5 class="modal-title" id="exampleModalLabel" style="color: #1d33ab">New Customer</h5>
               <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
               <form>
                 <div class="mb-3">
-                  <label class="col-form-label" for="itemCode">CustomerDTO ID:</label>
+                  <label class="col-form-label" for="itemCode">Customer ID:</label>
                   <input class="form-control" id="itemCode" type="text">
                 </div>
                 <div class="mb-3">
-                  <label class="col-form-label" for="name-text">CustomerDTO Name:</label>
+                  <label class="col-form-label" for="name-text">Customer Name:</label>
                   <input class="form-control" id="name-text" type="text">
                 </div>
                 <div class="mb-3">
-                  <label class="col-form-label" for="price">CustomerDTO Address:</label>
+                  <label class="col-form-label" for="price">Customer Address:</label>
                   <input class="form-control" id="price" type="text">
                 </div>
                 <div class="mb-3">
-                  <label class="col-form-label" for="qty">CustomerDTO Salary:</label>
+                  <label class="col-form-label" for="qty">Customer Salary:</label>
                   <input class="form-control" id="qty" type="text">
                 </div>
               </form>
@@ -292,8 +291,8 @@
               <button class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #565e64"
                       type="button">Close
               </button>
-              <button class="btn btn-primary" style="background-color: darkgreen" type="button">Renew</button>
-              <button class="btn btn-primary" style="background-color: darkblue" type="button">Save CustomerDTO
+              <button class="btn btn-primary" style="background-color: darkgreen" type="button">Update</button>
+              <button class="btn btn-primary" style="background-color: darkblue" type="button">Save Customer
               </button>
             </div>
           </div>
@@ -343,8 +342,8 @@
 <!--section placeOrder-->
 <section id="placeOrderPage">
 <section class="row d-flex flex-row justify-content-around">
-  <div class="shadow-lg col-4 mt-2" style="width: 500px; height:400px; border: 3px solid #4ed429">
-    <div style="background-color: #1a1e21; height: 26px; width: 100%">
+  <div class="shadow-lg col-4 mt-2" style=" width: 500px; height:400px; color: black ; border: solid 2px #343a40; position: relative;top: 10px;left: 10px ;background:#8395a7;">
+    <div style="background-color: #0c2461; height: 26px; width: 100%">
       <h5 class="mt-2" style="color: white">Invoice Details</h5>
     </div>
 
@@ -360,9 +359,7 @@
       <div class="col-md-6 mt-2">
         <label class="form-label" for="inputState">Customer ID</label>
         <select class="form-select" id="inputState">
-          <!-- <option>C001</option>
-           <option>C002</option>
-           <option>C003</option>-->
+
         </select>
       </div>
       <div class="col-md-6 mt-2">
@@ -384,8 +381,8 @@
     </div>
   </div>
 
-  <div class="shadow-lg col-4 mt-2" style="width: 500px; height: 400px; background-color:#a8a8a8">
-    <div style="background-color: #1a1e21; height: 28px; width: 100%">
+  <div class="shadow-lg col-4 mt-2" style="width: 500px; color: black;height: 400px;border: solid 2px #343a40; background-color:#8395a7 ; position: relative;top: 10px">
+    <div style="background-color: #0c2461; height: 28px; width: 100%">
       <h5 class="mt-2" style="color: white">Item Select</h5>
     </div>
 
@@ -394,9 +391,6 @@
       <div class="col-md-6 mt-2">
         <label class="form-label" for="selectItem">Item</label>
         <select class="form-select" id="selectItem">
-          <!--<option>I001</option>
-          <option>I002</option>
-          <option>I003</option>-->
         </select>
       </div>
       <div class="col-md-6 mt-1">
@@ -420,8 +414,8 @@
         <input class="form-control" id="inputOrderQTY" type="text">
       </div>
       <div class="row mt-3 m-1">
-        <button class="btn btn-primary mt-1" id="btnAddToCart"
-                style="font-family: Times; font-weight: bolder; background-color: #14b414"
+        <button class="btn  mt-1 " id="btnAddToCart"
+                style="font-family: Ubuntu;color: black; font-weight: bolder; border: #2f3542 1px solid;background-color: #2ed573;position: relative;bottom: -30px"
                 type="reset">Add To Cart
         </button>
       </div>
@@ -429,12 +423,12 @@
   </div>
 
   <div class="shadow-lg col-3 mt-2"
-       style="width: 500px; height: 400px; background-color:#020101;  border: 3px solid #000000">
+       style="width: 500px; height: 400px; background-color:#273c75;  border: 2px solid #000000; position: relative;top: 10px;right: 10px">
     <div class="mt-3 m-4">
-      <h5 id="totalPrice" style="color: #fcfcfc; font-family: 'Adobe Fangsong Std R'; font-size: 35px">Total
+      <h5 id="totalPrice" style="color: #fcfcfc; font-family: 'Ubuntu'; font-size: 33px">Total
         Price :
         Rs.0.00 </h5>
-      <h5 id="subTotal" style="color: #ce0303; font-family: 'Times New Roman'; font-size: 35px">Sub Total- :
+      <h5 id="subTotal" style="color: #ff3838; font-family: 'Ubuntu'; font-size: 33px">Sub Total- :
         Rs.0.00 </h5>
     </div>
 
@@ -455,8 +449,8 @@
       </div>
 
       <div class="d-flex flex-row justify-content-center mt-4">
-        <button class="btn btn-primary mt-1" id="purchase"
-                style="font-weight: bolder; background-color: #031dc9"
+        <button class="btn btn-sm mt-1" id="purchase"
+                style="font-weight: bolder;width: 160px; background-color: #78e08f;color: black"
                 type="reset">Purchase
         </button>
       </div>
@@ -468,7 +462,7 @@
 
   <!--table-->
   <section class="shadow-lg overflow-hidden container overflow-hidden">
-    <table class="table  table-dark table-bordered table-responsive-lg table-hover align-content-center  mt-5 bg-dark">
+    <table class="table  table-warning table-bordered table-responsive-lg table-hover align-content-center  mt-5 bg-dark">
       <thead class="align-content-center">
       <tr>
         <th scope="col">Item Code</th>
@@ -480,6 +474,13 @@
       </thead>
       <tbody id="orderTable">
 
+        <tr>
+          <th scope="row"> C002</th>
+          <td>Kumara</td>
+          <td>200090438</td>
+          <td>Galle</td>
+          <td>04343434</td>
+        </tr>
       </tbody>
     </table>
 
