@@ -133,6 +133,51 @@
       </form>
     </div>
 
+    <!--AddItem mode-->
+    <section>
+
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #162238">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2" style="color: white; font-weight: bolder">New
+              Item</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="col-form-label" for="iCode" style="color: white">Item Code:</label>
+                <input class="form-control" id="iCode" type="text">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label" for="itemName" style="color: white">Item Name:</label>
+                <input class="form-control" id="itemName" type="text">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label" for="Iprice" style="color: white">Item Price:</label>
+                <input class="form-control" id="Iprice" type="text">
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label" for="Iqty" style="color: white">Item Quantity:</label>
+                <input class="form-control" id="Iqty" type="text">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #565e64"
+                    type="button">Close
+            </button>
+            <button class="btn btn-primary" style="background-color: darkgreen" type="button" id="renewItem">Renew</button>
+            <button class="btn btn-primary" id="saveItem" style="background-color: darkblue" type="button">
+              Save Item
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <section class="shadow-sm">
       <table class="table table-primary table-bordered table-responsive-lg table-hover mt-3">
         <thead>
@@ -297,6 +342,131 @@
 
 <!--section placeOrder-->
 <section id="placeOrderPage">
+<section class="row d-flex flex-row justify-content-around">
+  <div class="shadow-lg col-4 mt-2" style="width: 500px; height:400px; border: 3px solid #4ed429">
+    <div style="background-color: #1a1e21; height: 26px; width: 100%">
+      <h5 class="mt-2" style="color: white">Invoice Details</h5>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mt-1">
+        <label class="form-label" for="inputOrderID">Order ID</label>
+        <input class="form-control" id="inputOrderID" type="email">
+      </div>
+      <div class="col-md-6 mt-1">
+        <label class="form-label" for="inputDate">Date</label>
+        <input class="form-control" id="inputDate" type="date">
+      </div>
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="inputState">Customer ID</label>
+        <select class="form-select" id="inputState">
+          <!-- <option>C001</option>
+           <option>C002</option>
+           <option>C003</option>-->
+        </select>
+      </div>
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="inputId">ID</label>
+        <input class="form-control" id="inputId" type="text" disabled>
+      </div>
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="inputName">Name</label>
+        <input class="form-control" id="inputName" type="text" disabled>
+      </div>
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="inputContact">Contact</label>
+        <input class="form-control" id="inputContact" type="text" disabled>
+      </div>
+      <div class="col-md-12 mt-2">
+        <label class="form-label" for="inputAddress">Address</label>
+        <input class="form-control" id="inputAddress" type="text" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-lg col-4 mt-2" style="width: 500px; height: 400px; background-color:#a8a8a8">
+    <div style="background-color: #1a1e21; height: 28px; width: 100%">
+      <h5 class="mt-2" style="color: white">Item Select</h5>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="selectItem">Item</label>
+        <select class="form-select" id="selectItem">
+          <!--<option>I001</option>
+          <option>I002</option>
+          <option>I003</option>-->
+        </select>
+      </div>
+      <div class="col-md-6 mt-1">
+        <label class="form-label" for="inputItemCode">Item Code</label>
+        <input class="form-control" id="inputItemCode" type="text" disabled>
+      </div>
+      <div class="col-md-4 mt-2">
+        <label class="form-label" for="inputIName">Name</label>
+        <input class="form-control" id="inputIName" type="text" disabled>
+      </div>
+      <div class="col-md-4 mt-2">
+        <label class="form-label" for="inputQTY">Qty On Hand</label>
+        <input class="form-control" id="inputQTY" type="text" disabled>
+      </div>
+      <div class="col-md-4 mt-2">
+        <label class="form-label" for="inputPrice">Price</label>
+        <input class="form-control" id="inputPrice" type="text" disabled>
+      </div>
+      <div class="col-md-12 mt-2">
+        <label class="form-label" for="inputOrderQTY">Order Quantity</label>
+        <input class="form-control" id="inputOrderQTY" type="text">
+      </div>
+      <div class="row mt-3 m-1">
+        <button class="btn btn-primary mt-1" id="btnAddToCart"
+                style="font-family: Times; font-weight: bolder; background-color: #14b414"
+                type="reset">Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-lg col-3 mt-2"
+       style="width: 500px; height: 400px; background-color:#020101;  border: 3px solid #000000">
+    <div class="mt-3 m-4">
+      <h5 id="totalPrice" style="color: #fcfcfc; font-family: 'Adobe Fangsong Std R'; font-size: 35px">Total
+        Price :
+        Rs.0.00 </h5>
+      <h5 id="subTotal" style="color: #ce0303; font-family: 'Times New Roman'; font-size: 35px">Sub Total- :
+        Rs.0.00 </h5>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="inputDiscount" style="color: white">Discount (Rs)</label>
+        <input class="form-control" id="inputDiscount" type="text">
+      </div>
+
+      <div class="col-md-6 mt-2">
+        <label class="form-label" for="inputCash" style="color: white">Cash (Rs)</label>
+        <input class="form-control" id="inputCash" type="text">
+      </div>
+
+      <div class="col-md-12 mt-2">
+        <label class="form-label" for="inputBalance" style="color: white" >Balance (Rs)</label>
+        <input class="form-control" id="inputBalance" type="text" >
+      </div>
+
+      <div class="d-flex flex-row justify-content-center mt-4">
+        <button class="btn btn-primary mt-1" id="purchase"
+                style="font-weight: bolder; background-color: #031dc9"
+                type="reset">Purchase
+        </button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!--table-->
   <section class="shadow-lg overflow-hidden container overflow-hidden">
     <table class="table  table-dark table-bordered table-responsive-lg table-hover align-content-center  mt-5 bg-dark">
       <thead class="align-content-center">
@@ -314,6 +484,7 @@
     </table>
 
   </section>
+</section>
 </section>
 
 <!--script-->
