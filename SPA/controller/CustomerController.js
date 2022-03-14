@@ -82,7 +82,6 @@ function loadCustomerTable1() {
 
     for (let i of customerArray) {
         let row = `<tr><td>${i.getCustomerID()}</td> <td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td> <td>${i.getCustomerCity()}</td><td>${i.getCustomerPostalCode()}</td></tr>`;
-        console.log(i.getCustomerID())
         $("#customerTableReg").append(row);
 
     }
