@@ -74,9 +74,25 @@
         <li class="nav-item" id="homeLink">
           <a class="nav-link active text-dark"  style="cursor: pointer" aria-current="page" >Home</a>
         </li>
-        <li class= "nav-item" id="orderLink" >
-          <a class="nav-link text-dark" style="cursor: pointer">Order</a>
+        <li class="nav-item dropdown">
+          <a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+             href="#"
+             id="navbarDropdown" role="button">
+            Orders
+          </a>
+          <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+
+            <li class="nav-item" id="navPlaceOrderLink">
+              <a aria-current="page" class="nav-link active" style="cursor: pointer; color: #000000;">Place Order</a>
+            </li>
+
+            <li class="nav-item" id="navCompletedOrders">
+              <a aria-current="page" class="nav-link active" style="cursor: pointer; color: #000000;">Completed Orders</a>
+            </li>
+
+          </ul>
         </li>
+
         <li class="nav-item" id="customerLink">
           <a class="nav-link text-dark" style="cursor: pointer">Customer</a>
         </li>
@@ -105,55 +121,55 @@
   <div ID="itemTitleContext">
     <h1 ID="ItemH1" class="container overflow-hidden mt-4" >Item</h1>
   </div>
-  <section class="row mt-4">
-    <div class="col-12">
-      <form class="row g-3">
+  <section class="row mt-4" style="background-color:#fff080;border-color: #000000;border-width: 1px;border-radius: 20px">
+    <div class="col-12" >
+      <form class="row g-3" style="padding-top:17px;padding-left:10px;padding-right: 10px ;color: black ">
 
         <div class="col-md-2">
-          <label for="itemCode" class="form-label"> Item Code</label>
-          <input type="text" class="form-control" id="itemCode" >
+          <label for="itemCodeIn" class="form-label"> Item Code</label>
+          <input type="text" class="form-control" id="itemCodeIn" >
           <p><small id="error0" class="text-danger pl-1"></small></p>
         </div>
 
-        <div class="col-md-8">
-          <label for="inputDescription" class="form-label">Description</label>
-          <input type="text" class="form-control" id="inputDescription">
+        <div class="col-md-6">
+          <label for="itemDescriptionIn" class="form-label">Description</label>
+          <input type="text" class="form-control" id="itemDescriptionIn">
           <p><small id="error01" class="text-danger pl-1"></small></p>
         </div>
 
         <div class="col-md-2">
-          <label for="packSize" class="form-label">Pack Size</label>
-          <input type="text" class="form-control" id="packSize">
+          <label for="packSizeIn" class="form-label">Pack Size</label>
+          <input type="text" class="form-control" id="packSizeIn">
           <p><small id="error02" class="text-danger pl-1"></small></p>
         </div>
 
         <div class="col-2">
-          <label for="unitPrice" class="form-label">Unit Price</label>
-          <input type="text" class="form-control" id="unitPrice">
+          <label for="unitPriceIn" class="form-label">Unit Price</label>
+          <input type="text" class="form-control" id="unitPriceIn">
           <p><small id="error03" class="text-danger pl-1"></small></p>
         </div>
 
         <div class="col-md-2">
-          <label for="inputQTy" class="form-label">Qty On Hand</label>
-          <input type="text" class="form-control" id="inputQty">
+          <label for="inputQTyIn" class="form-label">Qty On Hand</label>
+          <input type="text" class="form-control" id="inputQtyIn">
           <p><small id="error04" class="text-danger pl-1"></small></p>
         </div>
 
 
-        <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" id="btnItemRegister" disabled class="btn btn-secondary">Add new Item</button>
-          <button type="button" style="background-color:#4cd137; color:white" class="btn" id="btnItemUpdate" >Update</button>
+        <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end" style="position: relative;padding-bottom: 16px;padding-right: 10px">
+          <button type="button" id="btnItemRegister" class="btn" style="background: #4cd137;color: white" >Add new Item</button>
+          <button type="button" style="background-color:#2f85e7; color:white" class="btn" id="btnItemUpdate" >Update</button>
           <button type="button" class="btn btn-danger" id="btnItemDelete" >Remove</button>
         </div>
       </form>
     </div>
   </section>
 
-  <section class="row mt-5">
+  <section class="row mt-3">
     <div class="col-12">
-      <table class="table table-striped table-hover table-bordered ">
-        <thead>
-        <tr style="color: #6a89cc;background-color: #7f8c8d">
+      <table class="table  table-striped   table-responsive-lg table-hover mt-3 text-dark " style="border-color:#0A0A0A">
+        <thead align="center" style="color: #000000;background-color:#ffb72b">
+        <tr >
           <th scope="col">Item Code</th>
           <th scope="col">Description</th>
           <th scope="col">Pack Size</th>
@@ -161,7 +177,7 @@
           <th scope="col">Qty On Hand</th>
         </tr>
         </thead>
-        <tbody id="itemTableReg">
+        <tbody id="itemRegTable">
 
         </tbody>
       </table>
@@ -171,14 +187,14 @@
 
 
 <!--section customerPage-->
-<section  id="customerPage">
+<section  id="customerPage"style="background-color: #fefdfd">
   <section class="container container-fluid" >
     <div ID="titleContext">
       <h1 ID="customerH1" class="container container-fluid mt-4">Customer</h1>
     </div>
 
 
-    <section class="row mt-4" style="background-color:#ced6e0;border-color: #000000;border-width: 1px;border-radius: 20px">
+    <section class="row mt-4" style="background-color:#fff080;border-color: #000000;border-width: 1px;border-radius: 20px">
       <div class="col-12">
         <form class="row g-3" style="padding-top:17px;padding-left:10px; color: black ">
 
@@ -213,7 +229,7 @@
           </div>
 
           <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end" style="position: relative;padding-bottom: 16px;padding-right: 10px">
-            <button type="button" id="btnSaveCustomer" class="btn" style="background: #53b400;color: white" disabled >Register Customer</button>
+            <button type="button" id="btnSaveCustomer" class="btn" style="background: #4cd137;color: white" disabled >Register Customer</button>
             <button type="button" style="background-color:#2f85e7; color:white" id="btnUpdateCustomer" class="btn" disabled>Update</button>
             <button type="button" id="btnCustomerDelete" class="btn btn-danger" disabled>Delete </button>
           </div>
@@ -222,9 +238,9 @@
     </section>
 
     <!--Customer Details table-->
-    <section class="shadow-sm" >
+    <section class="row mt-3" >
       <table class="table  table-striped   table-responsive-lg table-hover mt-3 text-dark " style="border-color:#0A0A0A" >
-        <thead align="center" style="color: #000000;background-color:#e5d9b9" >
+        <thead align="center" style="color:#000000;background-color:#ffb72b" >
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
@@ -241,8 +257,8 @@
   </section>
 </section>
 
-<!--section orderDetails-->
-<section id="orderDetailsPage">
+<!--section CompletedOrderPage-->
+<section id="CompletedOrderPage">
   <h2> order Details page</h2>
 </section>
 
@@ -264,8 +280,8 @@
         <input class="form-control" id="inputDate" type="date">
       </div>
       <div class="col-md-6 mt-2">
-        <label class="form-label" for="inputState">Customer ID</label>
-        <select class="form-select" id="inputState">
+        <label class="form-label" for="selectCustomerID">Customer ID</label>
+        <select class="form-select" id="selectCustomerID">
 
         </select>
       </div>
@@ -356,7 +372,7 @@
       </div>
 
       <div class="d-flex flex-row justify-content-center mt-4">
-        <button class="btn btn-sm mt-1" id="purchase"
+        <button class="btn btn-sm mt-1" id="btnPurchase"
                 style="font-weight: bolder;width: 160px; background-color: #78e08f;color: black"
                 type="reset">Purchase
         </button>
@@ -381,13 +397,6 @@
       </thead>
       <tbody id="orderTable">
 
-        <tr>
-          <th scope="row"> C002</th>
-          <td>Kumara</td>
-          <td>200090438</td>
-          <td>Galle</td>
-          <td>04343434</td>
-        </tr>
       </tbody>
     </table>
 
@@ -418,7 +427,7 @@
     $("#itemPage").css("display","none");
     $("#customerPage").css("display","none");
     $("#placeOrderPage").css("display","none");
-    $("#orderDetailsPage").css("display","none");
+    $("#CompletedOrderPage").css("display","none");
 
     /*click events*/
     $("#homeLink").click(function () {
@@ -426,12 +435,13 @@
       $("#itemPage").css("display","none");
       $("#customerPage").css("display","none");
       $("#placeOrderPage").css("display","none");
-      $("#orderDetailsPage").css("display","none");
+      $("#CompletedOrderPage").css("display","none");
 
-      $("#orderLink").css("fontWeight","none")
-      $("#homeLink").css("fontWeight","bold")
-      $("#itemLink").css("fontWeight","normal")
-      $("#customerLink").css("fontWeight","normal")
+      $("#navPlaceOrderLink").css("fontWeight","normal");
+      $("#navCompletedOrders").css("fontWeight","normal");
+      $("#homeLink").css("fontWeight","bold");
+      $("#itemLink").css("fontWeight","normal");
+      $("#customerLink").css("fontWeight","normal");
 
     });
 
@@ -440,12 +450,13 @@
       $("#itemPage").css("display","block");
       $("#customerPage").css("display","none");
       $("#placeOrderPage").css("display","none");
-      $("#orderDetailsPage").css("display","none");
+      $("#CompletedOrderPage").css("display","none");
 
-      $("#itemLink").css("fontWeight","bold")
-      $("#homeLink").css("fontWeight","normal")
-      $("#customerLink").css("fontWeight","normal")
-      $("#orderLink").css("fontWeight","normal")
+      $("#itemLink").css("fontWeight","bold");
+      $("#homeLink").css("fontWeight","normal");
+      $("#customerLink").css("fontWeight","normal");
+      $("#navPlaceOrderLink").css("fontWeight","normal");
+      $("#navCompletedOrders").css("fontWeight","normal");
     });
 
     $("#customerLink").click(function () {
@@ -453,26 +464,44 @@
       $("#itemPage").css("display","none");
       $("#customerPage").css("display","block");
       $("#placeOrderPage").css("display","none");
-      $("#orderDetailsPage").css("display","none");
-      $("#customerLink").css("fontWeight","bold")
+      $("#CompletedOrderPage").css("display","none");
 
-      $("#homeLink").css("fontWeight","normal")
-      $("#itemLink").css("fontWeight","normal")
-      $("#orderLink").css("fontWeight","normal")
+      $("#customerLink").css("fontWeight","bold");
+      $("#homeLink").css("fontWeight","normal");
+      $("#itemLink").css("fontWeight","normal");
+      $("#navPlaceOrderLink").css("fontWeight","normal");
+      $("#navCompletedOrders").css("fontWeight","normal");
 
     });
 
-    $("#orderLink").click(function () {
+    $("#navPlaceOrderLink").click(function () {
+      $("#homePage").css("display","none");
+      $("#itemPage").css("display","none");
+      $("#customerPage").css("display","none");
+      $("#placeOrderPage").css("display","block");
+      $("#CompletedOrderPage").css("display","none");
+
+      $("#navPlaceOrderLink").css("fontWeight","bold");
+      $("#navCompletedOrders").css("fontWeight","normal");
+      $("#homeLink").css("fontWeight","normal");
+      $("#itemLink").css("fontWeight","normal");
+      $("#customerLink").css("fontWeight","normal");
+
+      initializePage();
+    });
+
+    $("#navCompletedOrders").click(function () {
       $("#homePage").css("display","none");
       $("#itemPage").css("display","none");
       $("#customerPage").css("display","none");
       $("#placeOrderPage").css("display","none");
-      $("#placeOrderPage").css("display","block");
+      $("#CompletedOrderPage").css("display","block");
 
-      $("#orderLink").css("fontWeight","bold")
-      $("#homeLink").css("fontWeight","normal")
-      $("#itemLink").css("fontWeight","normal")
-      $("#customerLink").css("fontWeight","normal")
+      $("#navCompletedOrders").css("fontWeight","bold");
+      $("#navPlaceOrderLink").css("fontWeight","normal");
+      $("#homeLink").css("fontWeight","normal");
+      $("#itemLink").css("fontWeight","normal");
+      $("#customerLink").css("fontWeight","normal");
     });
 
 

@@ -58,13 +58,10 @@ function updateCustomer() {
 function deleteCustomer() {
 
     $("#customerTableReg").empty();
-    for (let i = 0; i < customerArray; i++) {
-        console.log("inside for")
-        if ($("#customerIDInput").val() == customerArray[i].getCustomerID()) {
-            customerArray.splice(i, 1);
-            clearFields();
-        }
-    }
+
+    customerArray.splice( $("#customerIDInput").val(), 1);
+    clearFields();
+
 
     loadCustomerTable1();
     swal({
@@ -279,6 +276,7 @@ function clearFields() {
     $("#customerAddressInput").val("");
     $("#customerCityInput").val("");
     $("#customerPostalCodeInput").val("");
+    $("#customerIDInput").css('border','silver 1px solid');
 }
 
 
